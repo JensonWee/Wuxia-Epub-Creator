@@ -20,7 +20,8 @@ table = [] #useful for making Table of contents (TOC)
 
 #------------------enter your URL here-------------------------------
 # make sure its from wuxiaworld.co and not wuxiaworld.com
-url = "https://www.wuxiaworld.co/My-Vampire-System/" #url of the chapter
+title = "Reincarnation-Of-The-Strongest-Sword-God"
+url = "https://www.wuxiaworld.co/"+ title1 +"/" #url of the chapter
 
 
 #extract links 
@@ -46,11 +47,11 @@ titleOfBook = str(titleOfBook.get_text())
 book.set_title(titleOfBook)
 
 #adding Cover image
-imgurl = soup.find("img", {"class": "bg-img"})
-imgurl = imgurl.attrs['src']
-urllib.request.urlretrieve(imgurl, "cover.jpg")
-book.set_cover("cover.jpg", open('cover.jpg', 'rb').read())
-os.remove("cover.jpg")
+f = open (title+".jpg", "wb")
+f.write(requests.get("https://img.wuxiaworld.co/BookFiles/BookImages/"+title+".jpg").content)
+f.close()
+book.set_cover(title+".jpg", open(title+'.jpg', 'rb').read())
+os.remove(title+".jpg")
 
 #adding spine = important
 book.spine = ['cover','nav']
