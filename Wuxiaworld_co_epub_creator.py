@@ -20,8 +20,9 @@ table = [] #useful for making Table of contents (TOC)
 
 #------------------enter your URL here-------------------------------
 # make sure its from wuxiaworld.co and not wuxiaworld.com
-title = "Reincarnation-Of-The-Strongest-Sword-God"
-url = "https://www.wuxiaworld.co/"+ title1 +"/" #url of the chapter
+#title = "Reincarnation-Of-The-Strongest-Sword-God"
+title = "Only-I-level-up"
+url = "https://www.wuxiaworld.co/"+ title +"/" #url of the chapter
 
 
 #extract links 
